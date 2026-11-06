@@ -1,0 +1,9 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Choose a signal-confidence threshold using only mature calibration feedback and deterministic error costs."
+summary: "Makes lightweight policy revision measurable with a fixed underlying LLM. No orders, holdings or transaction-log reconstruction are involved."
+highlights:
+  - "Use a frozen input snapshot without a market-data account"
+  - "Check the answer with a deterministic executable verifier"
+steps:
+  - "Supply the typed input shown in the task documentation"
+  - "Run the task and inspect the verified result"

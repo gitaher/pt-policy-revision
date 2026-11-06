@@ -1,0 +1,24 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: pt-policy-revision
+name: PersonalTrader Policy Revision
+version: 0.1.0
+status: in-development
+spec: nanoagent.plugin/v0001
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  compute:
+    description: "Choose a signal-confidence threshold using only mature calibration feedback and deterministic error costs."
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  revise-policy:
+    description: "Choose a signal-confidence threshold using only mature calibration feedback and deterministic error costs."
+    runner: agent
+    tools: [compute]
+    reference: null
+    instructions: "Choose a signal-confidence threshold using only mature calibration feedback and deterministic error costs. Return every output field. Makes lightweight policy revision measurable with a fixed underlying LLM. No orders, holdings or transaction-log reconstruction are involved."

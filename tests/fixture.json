@@ -1,0 +1,66 @@
+{
+  "input": {
+    "feedback": [
+      {
+        "id": "f1",
+        "strength": 20,
+        "correct": false,
+        "decided_at": "2026-01-01T00:00:00Z",
+        "resolved_at": "2026-01-02T00:00:00Z",
+        "split": "calibration"
+      },
+      {
+        "id": "f2",
+        "strength": 80,
+        "correct": true,
+        "decided_at": "2026-01-01T00:00:00Z",
+        "resolved_at": "2026-01-03T00:00:00Z",
+        "split": "calibration"
+      },
+      {
+        "id": "future",
+        "strength": 90,
+        "correct": false,
+        "decided_at": "2026-01-01T00:00:00Z",
+        "resolved_at": "2026-01-06T00:00:00Z",
+        "split": "calibration"
+      },
+      {
+        "id": "hidden",
+        "strength": 80,
+        "correct": false,
+        "decided_at": "2026-01-01T00:00:00Z",
+        "resolved_at": "2026-01-03T00:00:00Z",
+        "split": "holdout"
+      }
+    ],
+    "cutoff": "2026-01-05T00:00:00Z",
+    "candidates": [
+      0,
+      50,
+      101
+    ],
+    "current_threshold": 0
+  },
+  "gold": {
+    "chosen_threshold": 50,
+    "losses": [
+      {
+        "threshold": 0,
+        "cost": 3
+      },
+      {
+        "threshold": 50,
+        "cost": 1
+      },
+      {
+        "threshold": 101,
+        "cost": 2
+      }
+    ],
+    "evidence_ids": [
+      "f1",
+      "f2"
+    ]
+  }
+}
